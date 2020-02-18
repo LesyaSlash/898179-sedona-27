@@ -19,21 +19,20 @@
       </nav>
     </header>
     <main>
-      <h1>Добро пожаловать в Седону!</h1>
+      <h1 class="visually-hidden">Добро пожаловать в Седону!</h1>
       <div>
-        <img src="img/background-index.jpg" width="1200" height="774" alt="Фото Седоны">
         <img src="img/welcome-sedona.svg" width="459" height="353" alt="Добро пожаловать в Седону">
         <p>Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
         <p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
       </div>
       <section>
-        <h2>Преимущества</h2>
+        <h2 class="visually-hidden">Преимущества</h2>
         <ul>
           <li>
             <h3>Настоящий городок</h3>
             <span>— №1 —</span>
             <p>Седона — не аттракцион для туристов, там течёт своя жизнь</p>
-            <img src="sedona-photo-1.jpg" width="" height="" alt="Уличное фото">
+            <img src="img/sedona-photo-1.jpg" width="800" height="259" alt="Уличное фото">
           </li>
           <li>
             <h3>Жильё</h3>
@@ -51,7 +50,7 @@
             <h3>Там есть Мост дьявола</h3>
             <span>— №2 —</span>
             <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
-            <img src="sedona-photo-2.jpg" width="" height="" alt="Фото Моста дьявола">
+            <img src="img/sedona-photo-2.jpg" width="800" height="256" alt="Фото Моста дьявола">
           </li>
           <li>
             <h3>Небольшая площадь</h3>
@@ -76,19 +75,45 @@
         и мы покажем вам лучшие предложения гостиниц в седоне</p>
       </div>
       <section>
-        <h2>Поиск гостиницы в Седоне</h2>
-        <!--Здесь будет форма, а пока список-->
-        <ul>
-          <li>Дата заезда</li>
-          <li>Дата выезда</li>
-          <li>Взрослые</li>
-          <li>Дети</li>
-        </ul>
-        <button type="button">Найти</button>
+        <h2 class="visually-hidden">Поиск гостиницы</h2>
+        <button class="btn-popup" type="button">Поиск гостиницы в Седоне</button>
+        <form action="https://echo.htmlacademy.ru" method="post">
+          <p>
+            <label for="date-of-arrive">Дата заезда:</label>
+            <input type="date" name="date-of-arrive" id="date-of-arrive" value="24 апреля 2017">
+            <button type="button" name="calendar-arrive">
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22">
+                  <path d="M19.251 2.025h-2.845V.648c0-.381-.294-.689-.656-.689-.363 0-.656.308-.656.689v1.377h-3.938V.648c0-.381-.294-.689-.655-.689-.363 0-.657.308-.657.689v1.377H5.906V.648c0-.381-.294-.689-.656-.689-.363 0-.657.308-.657.689v1.377H1.75C.784 2.025 0 2.847 0 3.862v16.302C0 21.179.784 22 1.75 22h17.501c.966 0 1.749-.821 1.749-1.836V3.862c0-1.015-.783-1.837-1.749-1.837zm.437 18.139a.448.448 0 0 1-.437.459H1.75a.45.45 0 0 1-.438-.459V3.862a.45.45 0 0 1 .438-.459h2.844v1.378c0 .381.294.689.657.689.362 0 .656-.308.656-.689V3.403h3.938v1.378c0 .381.294.689.657.689.361 0 .655-.308.655-.689V3.403h3.938v1.378c0 .381.293.689.656.689.362 0 .656-.308.656-.689V3.403h2.845c.241 0 .437.206.437.459v16.302z"/>
+                  <path d="M4.594 8.225h2.625v2.066H4.594zM4.594 11.668h2.625v2.067H4.594zM4.594 15.112h2.625v2.066H4.594zM9.188 15.112h2.625v2.066H9.188zM9.188 11.668h2.625v2.067H9.188zM9.188 8.225h2.625v2.066H9.188zM13.781 15.112h2.625v2.066h-2.625zM13.781 11.668h2.625v2.067h-2.625zM13.781 8.225h2.625v2.066h-2.625z"/>
+              </svg>
+            </button>
+          </p>
+          <p>
+            <label for="date-of-departure">Дата выезда:</label>
+            <input type="date" name="date-of-departure" id="date-of-departure" value="4 июля 2017">
+            <button type="button" name="calendar-departure">
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22">
+                  <path d="M19.251 2.025h-2.845V.648c0-.381-.294-.689-.656-.689-.363 0-.656.308-.656.689v1.377h-3.938V.648c0-.381-.294-.689-.655-.689-.363 0-.657.308-.657.689v1.377H5.906V.648c0-.381-.294-.689-.656-.689-.363 0-.657.308-.657.689v1.377H1.75C.784 2.025 0 2.847 0 3.862v16.302C0 21.179.784 22 1.75 22h17.501c.966 0 1.749-.821 1.749-1.836V3.862c0-1.015-.783-1.837-1.749-1.837zm.437 18.139a.448.448 0 0 1-.437.459H1.75a.45.45 0 0 1-.438-.459V3.862a.45.45 0 0 1 .438-.459h2.844v1.378c0 .381.294.689.657.689.362 0 .656-.308.656-.689V3.403h3.938v1.378c0 .381.294.689.657.689.361 0 .655-.308.655-.689V3.403h3.938v1.378c0 .381.293.689.656.689.362 0 .656-.308.656-.689V3.403h2.845c.241 0 .437.206.437.459v16.302z"/>
+                  <path d="M4.594 8.225h2.625v2.066H4.594zM4.594 11.668h2.625v2.067H4.594zM4.594 15.112h2.625v2.066H4.594zM9.188 15.112h2.625v2.066H9.188zM9.188 11.668h2.625v2.067H9.188zM9.188 8.225h2.625v2.066H9.188zM13.781 15.112h2.625v2.066h-2.625zM13.781 11.668h2.625v2.067h-2.625zM13.781 8.225h2.625v2.066h-2.625z"/>
+              </svg>
+            </button>
+          </p>
+          <p>
+            <label for="number-of-adults">Взрослые:</label>
+            <input type="number" name="adults" id="number-of-adults" value="2" min="1" step="1">
+            <button type="button" class="minus" name="minus-adults">-</button>
+            <button type="button" class="plus" name="plus-adults">+</button>
+            <label for="number-of-children">Дети:</label>
+            <input type="number" name="children" id="number-of-children" value="0" min="0" step="1">
+            <button type="button" class="minus" name="minus-children">-</button>
+            <button type="button" class="plus" name="plus-children">+</button>
+          </p>
+          <button type="submit">Найти</button>
+        </form>
       </section>
       <section>
-        <h2>Карта</h2>
-        <img src="sedona-map.png" width="" height="" alt="Карта Седоны">
+        <h2 class="visually-hidden">Карта</h2>
+        <img src="img/sedona-map.jpg" width="1200" height="594" alt="Седона на карте штата">
       </section>
     </main>
     <footer>
@@ -97,9 +122,9 @@
       </p>
       <div>
         <ul>
-          <li><a href="#">twitter</a></li>
-          <li><a href="#">facebook</a></li>
-          <li><a href="#">youtube</a></li>
+          <li><a href="#" aria-label="Twitter">twitter</a></li>
+          <li><a href="#" aria-label="Facebook">facebook</a></li>
+          <li><a href="#" aria-label="Youtube">youtube</a></li>
         </ul>
       </div>
       <a href="https://htmlacademy.ru/intensive/htmlcss">

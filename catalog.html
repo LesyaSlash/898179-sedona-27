@@ -19,8 +19,65 @@
       </nav>
     </header>
     <main>
-      <h1>Поиск отелей</h1>
-      <!-- Здесь будет форма поиска -->
+      <h1 class="visually-hidden">Поиск отелей</h1>
+      <form action="https://echo.htmlacademy.ru" method="get">
+        <fieldset>
+          <legend>Инфраструктура:</legend>
+          <ul>
+            <li>
+              <label>
+                <input type="checkbox" name="swimmingpool" checked>
+                Бассейн
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="parking">
+                Парковка
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="wi-fi">
+                Wi-Fi
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset>
+          <legend>Тип жилья:</legend>
+          <ul>
+            <li>
+              <label>
+                <input type="checkbox" name="hotel" checked>
+                Гостиница
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="motel" checked>
+                Мотель
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="apart" checked>
+                Апартаменты
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <div class="range-slider">
+          <label for="price-min">Стоимость в сутки (Р):</label>
+          <input type="text" name="price-min" id="price-min" value="От 0">
+          <input type="text" name="price-max" value="До 3000">
+          <div class="range-slider-track">
+            <div class="range-slider-pin range-slider-pin-min"></div>
+            <div class="range-slider-pin range-slider-pin-max"></div>
+          </div>
+        </div>
+        <button type="submit">Показать</button>
+      </form>
       <div>
         <span>Найдено: 3</span>
         <span>Сортировка:</span>
@@ -33,7 +90,7 @@
           <a href="">Сортировка по убыванию</a>
       </div>
       <section>
-        <h2>Список найденных отелей</h2>
+        <h2 class="visually-hidden">Список найденных отелей</h2>
         <ul>
           <li>
             <h3>Amara Resort & Spa</h3>
@@ -86,9 +143,9 @@
       </p>
       <div>
         <ul>
-          <li><a href="#">twitter</a></li>
-          <li><a href="#">facebook</a></li>
-          <li><a href="#">youtube</a></li>
+          <li><a href="#" aria-label="Twitter">twitter</a></li>
+          <li><a href="#" aria-label="Facebook">facebook</a></li>
+          <li><a href="#" aria-label="Youtube">youtube</a></li>
         </ul>
       </div>
       <a href="https://htmlacademy.ru/intensive/htmlcss">

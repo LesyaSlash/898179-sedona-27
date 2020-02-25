@@ -1,0 +1,329 @@
+/* pt-sans-regular - latin_cyrillic */
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/pt-sans-v11-latin_cyrillic-regular.eot'); /* IE9 Compat Modes */
+  src: local('PT Sans'), local('PTSans-Regular'),
+       url('../fonts/pt-sans-v11-latin_cyrillic-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/pt-sans-v11-latin_cyrillic-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/pt-sans-v11-latin_cyrillic-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/pt-sans-v11-latin_cyrillic-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/pt-sans-v11-latin_cyrillic-regular.svg#PTSans') format('svg'); /* Legacy iOS */
+}
+/* pt-sans-700 - latin_cyrillic */
+@font-face {
+  font-family: 'PT Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/pt-sans-v11-latin_cyrillic-700.eot'); /* IE9 Compat Modes */
+  src: local('PT Sans Bold'), local('PTSans-Bold'),
+       url('../fonts/pt-sans-v11-latin_cyrillic-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/pt-sans-v11-latin_cyrillic-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/pt-sans-v11-latin_cyrillic-700.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/pt-sans-v11-latin_cyrillic-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/pt-sans-v11-latin_cyrillic-700.svg#PTSans') format('svg'); /* Legacy iOS */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans Narrow", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 26px;
+  color: #000000;
+  text-transform: uppercase;
+  background-color: #ffffff;
+}
+.catalog-page {
+  background-color: #fefefe;
+}
+a {
+  text-decoration: none;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.button {
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  vertical-align: middle;
+  border: none;
+}
+
+/* ---------------- HEADER ----------------- */
+.header {
+  background-color: #ffffff;
+}
+.nav-list {
+  list-style: none;
+}
+.nav a{
+  color: #000000;
+  font-weight: bold;
+}
+.nav a:hover,
+.nav a:focus {
+  color: #81b3d2;
+}
+.nav a:active{
+  color: rgba(0, 0, 0, 0.3);
+}
+.nav .current-page,
+.nav .current-page:hover,
+.nav .current-page:focus,
+.nav .current-page:active {
+  color: #766357;
+}
+
+/* ---------------- MAIN ----------------- */
+.welcome-sedona {
+  text-align: center;
+  background: url("../img/white-mask.svg") no-repeat,
+  #dbe9f2 url("../img/background-index.jpg") no-repeat;
+}
+.text-welcome-sedona {
+  background-color: #ffffff;
+}
+.text-welcome-sedona p:first-child {
+  font-size: 21px;
+  font-weight: bold;
+}
+.text-welcome-sedona p:last-child {
+  color: #333333;
+}
+
+.features-list {
+  list-style: none;
+}
+.features-item h3,
+.features-item p {
+  text-align: center;
+} /* span'ы пока не центрирую, т.к. это материал из следующих лекций */
+.features-item h3{
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: bold;
+}
+.features-item p {
+  line-height: 21px;
+  color: #333333;
+}
+.illustrated-feature h3,
+.illustrated-feature span,
+.illustrated-feature p {
+  color: #ffffff;
+}
+div.illustrated-feature {
+  background-color: #81b3d2;
+}
+
+.city-feature-house::before,
+.city-feature-food::before,
+.city-feature-gift::before {
+  content: "";
+  position: absolute;
+  background-repeat:no-repeat;
+}
+
+.city-feature-house::before {
+  width: 75px;
+  height: 72px;
+  background-image: url("../img/icon-1.svg");
+}
+.city-feature-food::before {
+  width: 74px;
+  height: 70px;
+  background-image: url("../img/icon-2.svg");
+}
+.city-feature-gift::before {
+  width: 64px;
+  height: 76px;
+  background-image: url("../img/icon-3.svg");
+}
+.want-to-search p:first-child {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 36px;
+  text-align: center;
+}
+.want-to-search p:last-child {
+  line-height: 24px;
+  text-align: center;
+}
+
+.btn-popup,
+.btn-submit-booking {
+  font-size: 21px;
+}
+.btn-popup,
+.btn-booking {
+  background-color: #766357;
+}
+.btn-popup:hover,
+.btn-booking:hover {
+  background-color: #604e43;
+}
+.btn-popup:focus,
+.btn-booking:focus {
+  background-color: #604e43;
+  outline: 2px solid black;
+}
+.btn-popup:active,
+.btn-booking:active  {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #503e33;
+  outline: none;
+}
+/* .popup-booking {
+  display: none;
+} */
+.popup-booking {
+  font: inherit;
+  font-weight:bold;
+  text-align: left;
+}
+.popup-booking input{
+  font: inherit;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #f2f2f2;
+  border: none;
+}
+.popup-booking input:hover {
+  background-color: #ebebeb;
+}
+.popup-booking input:focus {
+  background-color: transparent;
+  outline: 2px solid #e5e5e5;
+}
+.popup-booking input[type="number"] {
+  text-align: center;
+}
+.btn-submit-booking,
+.btn-about {
+  background-color: #81b3d2;
+}
+.btn-submit-booking:hover,
+.btn-about:hover {
+  background-color: #669ec0;
+}
+.btn-submit-booking:focus,
+.btn-about:focus {
+  background-color: #669ec0;
+  outline: 2px solid #6672c0;
+}
+.btn-submit-booking:active,
+.btn-about:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #5496bd;
+  outline: none;
+}
+
+.find-hotel {
+  color: #ffffff;
+  background-color: #3e698b;
+  background-image: url("../img/filter-background.jpg");
+  background-position: 0 40%; /*40% - временное смещение, чтобы белый текст был читабелен на этом фоне*/
+  background-repeat: no-repeat;
+}
+.find-hotel fieldset {
+  border: none;
+}
+.find-hotel legend,
+.range-slider {
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 21px;
+}
+.find-hotel ul {
+  list-style: none;
+  line-height: 21px;
+}
+.range-slider input,
+.search-btn {
+  font: inherit;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 21px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: middle;
+  background-color: transparent;
+  border: 2px solid white;
+}
+.search-btn:hover,
+.search-btn:focus {
+  color: #000000;
+  background-color: #ffffff;
+}
+.search-results ul {
+  list-style: none;
+}
+.search-results span:first-child {
+  font-size: 21px;
+  font-weight: bold;
+}
+.search-results span:nth-child(2),
+.search-sorting a {
+  font-size: 12px;
+  line-height: 18px;
+}
+.search-sorting a {
+  color: rgba(0, 0, 0, 0.3);
+  text-decoration: underline dotted #81b3d2;
+}
+.search-sorting a:hover,
+.search-sorting a:focus {
+  color: #81b3d2;
+}
+.search-sorting a:active {
+  color: #000000;
+  text-decoration: none;
+}
+.search-sorting .current-sorting,
+.search-sorting .current-sorting:hover,
+.search-sorting .current-sorting:focus,
+.search-sorting .current-sorting:active {
+  color: #81b3d2;
+  text-decoration: none;
+}
+.hotels-results h3 {
+  font-size: 21px;
+  font-weight: bold;
+}
+.hotel-raiting {
+  color: #666666;
+  line-height: 21px;
+  text-align: center;
+  background-color: #f2f2f2;
+}
+
+/* ---------------- FOOTER ----------------- */
+.index-footer a{
+  color: inherit;
+}
+.footer-contacts {
+  font-size: 21px;
+  font-weight: bold;
+}
+.footer-social {
+  text-align: center;
+}
+ul.footer-social {
+  list-style: none;
+}
+.footer-copyright path:hover {
+  fill: #81b3d2;
+}
+.footer-copyright path:active {
+  fill:#bdbbbc;
+}

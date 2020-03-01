@@ -548,11 +548,13 @@ p.popup-booking:not(:first-child) {
 }
 
 /* ---------------- FOOTER ----------------- */
-.index-footer {
-  background-color: #ffffff;
+.footer {
   padding: 36px 0;
 }
-.index-footer a{
+.index-footer {
+  background-color: #ffffff;
+}
+.footer a{
   color: inherit;
 }
 .footer-container {

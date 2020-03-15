@@ -107,15 +107,17 @@
                 </svg>
               </button>
             </p>
-            <div class="popup-booking number-of-people">
+            <div class="number-of-people adults-booking-wrapper">
+              <label for="number-of-adults">Взрослые:</label>
               <p class="popup-booking-adults">
-                <label for="number-of-adults">Взрослые:</label>
                 <button type="button" class="minus" name="minus-adults">-</button>
                 <input type="number" name="adults" id="number-of-adults" value="2" min="1" step="1">
                 <button type="button" class="plus" name="plus-adults">+</button>
               </p>
+            </div>
+            <div class="number-of-people children-booking-wrapper">
+              <label for="number-of-children">Дети:</label>
               <p class="popup-booking-children">
-                <label for="number-of-children">Дети:</label>
                 <button type="button" class="minus" name="minus-children">-</button>
                 <input type="number" name="children" id="number-of-children" value="0" min="0" step="1">
                 <button type="button" class="plus" name="plus-children">+</button>

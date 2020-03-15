@@ -741,7 +741,7 @@ p.popup-booking:nth-child(2) {
 }
 .search-sorting a:active {
   color: #000000;
-  text-decoration: none;
+  border-bottom: none;
 }
 .search-sorting .current-sorting,
 .search-sorting .current-sorting:hover,

@@ -82,7 +82,7 @@ a {
   text-align: left;
 }
 .nav-item:nth-child(2) {
-  flex-grow: 1;
+  margin-right: auto;
 }
 .nav-item:nth-child(3),
 .nav-item:last-child {
@@ -306,13 +306,10 @@ section.search {
 .btn-booking:hover {
   background-color: #604e43;
 }
-.btn-popup:focus,
-.btn-booking:focus {
-  background-color: #604e43;
-  outline: 2px solid black;
-}
 .btn-popup:active,
-.btn-booking:active  {
+.btn-booking:active,
+.btn-popup:focus,
+.btn-booking:focus  {
   color: rgba(255, 255, 255, 0.3);
   background-color: #503e33;
   outline: none;
@@ -441,7 +438,7 @@ p.popup-booking:nth-child(2) {
   left: 14px;
   width: 11px;
   height: 3px;
-  background-color: rgba(0, 1, 1, 0.15);
+  background-color: #a9a9a9;
 }
 
 .plus::before {
@@ -535,6 +532,7 @@ p.popup-booking:nth-child(2) {
 }
 .hotel-infrastructure li,
 .hotel-type li {
+  position: relative;
   margin-bottom: 25px;
 }
 .hotel-infrastructure li:last-child
@@ -543,7 +541,6 @@ p.popup-booking:nth-child(2) {
 }
 .hotel-infrastructure label,
 .hotel-type label {
-  position: relative;
   cursor: pointer;
 }
 .hotel-infrastructure label {
@@ -552,28 +549,29 @@ p.popup-booking:nth-child(2) {
 .hotel-type label {
   padding-left: 42px;
 }
-.hotel-infrastructure .checkbox,
-.hotel-type .checkbox {
+.hotel-infrastructure label::before,
+.hotel-type label::before {
   position: absolute;
   left: 0;
-  top: -3px ;
+  top: -2px ;
   width: 27px;
   height: 23px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='23' height='23' viewBox='0 0 23 23'%3E%3Cpath fill='%23fff' d='M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
+  content: "";
 }
-.checkbox-input:checked + .checkbox {
+.checkbox-input:checked + label::before {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='27' height='23' viewBox='0 0 27 23'%3E%3Cpath fill='%23fff' d='M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z'/%3E%3Cpath fill='%23fff' d='M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z'/%3E%3C/svg%3E");
 }
-.checkbox-input:disabled + .checkbox {
+.checkbox-input:disabled + label::before {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='23' height='23' viewBox='0 0 23 23'%3E%3Cpath fill='%236a6a6a' d='M20 2c.542 0 1 .458 1 1v17c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h17m0-2H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3V3c0-1.65-1.35-3-3-3z'/%3E%3C/svg%3E");
 }
-.checkbox-input:disabled:checked + .checkbox {
+.checkbox-input:disabled:checked + label::before {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='27' height='23' viewBox='0 0 27 23'%3E%3Cpath fill='%236a6a6a' d='M7.285 7.486l-2.829 2.829 7.783 7.783L26.171 4.166l-2.828-2.829-11.104 11.102z'/%3E%3Cpath fill='%236a6a6a' d='M21 20c0 .542-.458 1-1 1H3c-.542 0-1-.458-1-1V3c0-.542.458-1 1-1h16.908L21.493.415A2.96 2.96 0 0 0 20 0H3C1.35 0 0 1.35 0 3v17c0 1.65 1.35 3 3 3h17c1.65 0 3-1.35 3-3v-9.829l-2 2V20z'/%3E%3C/svg%3E");
 }
-.checkbox-input:focus + .checkbox,
-.checkbox-input:checked:focus + .checkbox {
-  outline: 2px solid #ffffff;
+.checkbox-input:focus + label::before,
+.checkbox-input:checked:focus + label::before {
+  box-shadow: 0 0 5px 3px rgba(255, 255, 255, 0.7);
 }
 .range-slider {
   width: 318px;

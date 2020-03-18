@@ -266,6 +266,7 @@ div.illustrated-feature {
 }
 section.search {
   position: relative;
+  z-index: 3;
   align-items:center;
   margin: 0;
   padding: 0;
@@ -286,12 +287,14 @@ section.search {
   text-align: center;
 }
 .btn-popup {
+  position: relative;
   display: block;
   width: 568px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 31px;
   padding-bottom: 31px;
+  z-index: 2;
 }
 .btn-popup,
 .btn-submit-booking {
@@ -314,11 +317,22 @@ section.search {
   background-color: #503e33;
   outline: none;
 }
-  /* .popup-booking {
-  display: none;
-} */
+@keyframes open {
+  0% {transform: translateY(-200px) scaleY(0);}
+  100% {transform: translateY(0) scaleY(1);}
+}
+@keyframes close {
+  0% {transform: translateY(0) scaleY(1);}
+  100% {transform: translateY(-200px) scaleY(0);}
+}
+@keyframes shake {
+  0%, 100% {transform: translateX(0);}
+  10%, 30%, 50%, 70%, 90% {transform: translateX(-10px);}
+  20%, 40%, 60%, 80% {transform: translateX(10px);}
+}
 .popup-booking-wrapper {
   position: absolute;
+  z-index: -1;
   left: 50%;
   display: flex;
   flex-wrap: wrap;
@@ -331,6 +345,18 @@ section.search {
   text-align: left;
   background-color: #ffffff;
   box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
+  animation: open 0.5s;
+  animation-fill-mode: forwards;
+}
+.popup-hide {
+  display: none;
+}
+.popup-close {
+  animation: close 0.5s;
+  animation-fill-mode: forwards;
+}
+.popup-error {
+  animation: shake 0.7s;
 }
 p.popup-booking {
   position: relative;
@@ -440,7 +466,6 @@ p.popup-booking:nth-child(2) {
   height: 3px;
   background-color: #a9a9a9;
 }
-
 .plus::before {
   -webkit-transform: rotate(90deg);
          transform: rotate(90deg);

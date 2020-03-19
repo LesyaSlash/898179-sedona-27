@@ -317,13 +317,26 @@ section.search {
   background-color: #503e33;
   outline: none;
 }
+@-webkit-keyframes open {
+  0% {-webkit-transform: translateY(-200px) scaleY(0);transform: translateY(-200px) scaleY(0);}
+  100% {-webkit-transform: translateY(0) scaleY(1);transform: translateY(0) scaleY(1);}
+}
 @keyframes open {
   0% {transform: translateY(-200px) scaleY(0);}
   100% {transform: translateY(0) scaleY(1);}
 }
+@-webkit-keyframes close {
+  0% {-webkit-transform: translateY(0) scaleY(1);transform: translateY(0) scaleY(1);}
+  100% {-webkit-transform: translateY(-200px) scaleY(0);transform: translateY(-200px) scaleY(0);}
+}
 @keyframes close {
   0% {transform: translateY(0) scaleY(1);}
   100% {transform: translateY(-200px) scaleY(0);}
+}
+@-webkit-keyframes shake {
+  0%, 100% {-webkit-transform: translateX(0);transform: translateX(0);}
+  10%, 30%, 50%, 70%, 90% {-webkit-transform: translateX(-10px);transform: translateX(-10px);}
+  20%, 40%, 60%, 80% {-webkit-transform: translateX(10px);transform: translateX(10px);}
 }
 @keyframes shake {
   0%, 100% {transform: translateX(0);}
@@ -345,18 +358,23 @@ section.search {
   text-align: left;
   background-color: #ffffff;
   box-shadow: 0px 7px 15px 0 rgba(0, 1, 1, 0.15);
-  animation: open 0.5s;
-  animation-fill-mode: forwards;
+  -webkit-animation: open 0.5s;
+         animation: open 0.5s;
+  -webkit-animation-fill-mode: forwards;
+         animation-fill-mode: forwards;
 }
 .popup-hide {
   display: none;
 }
 .popup-close {
-  animation: close 0.5s;
-  animation-fill-mode: forwards;
+  -webkit-animation: close 0.5s;
+          animation: close 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 .popup-error {
-  animation: shake 0.7s;
+  -webkit-animation: shake 0.7s;
+          animation: shake 0.7s;
 }
 p.popup-booking {
   position: relative;
@@ -520,6 +538,22 @@ p.popup-booking:nth-child(2) {
   color: rgba(255, 255, 255, 0.3);
   background-color: #5496bd;
   outline: none;
+}
+.index-map {
+  position: relative;
+}
+.index-map iframe {
+  position: relative;
+  z-index: 2;
+  border: none;
+}
+.index-map img {
+ position: absolute;
+ top: 0;
+ left: 0;
+ z-index: 1;
+
+ margin: 0;
 }
 .find-hotel {
   display: flex;
@@ -891,7 +925,7 @@ p.btn-wrapper {
 }
 .index-footer {
   position: absolute;
-  z-index: 1;
+  z-index: 3;
   margin-top: -129px;
   background-color: rgba(254, 254, 254, 0.9);
 }
